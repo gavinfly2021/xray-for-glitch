@@ -104,6 +104,7 @@ app.use(
 /* keepalive  begin */
 function keepalive() {
   // 1.请求主页，保持唤醒
+  let render_app_url ="https://foamy-lake-paradox.glitch.me";
   exec("curl -m5 " + url, function (err, stdout, stderr) {
     if (err) {
       console.log("保活-请求主页-命令行执行错误：" + err);
